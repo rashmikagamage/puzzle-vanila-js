@@ -1,0 +1,74 @@
+/** code by webdevtrick ( https://webdevtrick.com ) **/ *
+, *: before, *: after {
+    box - sizing: border - box;
+}
+
+html, body {
+    height: 100 % ;
+    overflow: hidden;
+    background: #ECECEC;
+}
+
+.split {
+    width: 850 px;
+    height: 500 px;
+    position: absolute;
+    top: 50 % ;
+    left: 50 % ;
+    transform: translate(-50 % , -50 % );
+    perspective: 400 px;
+    cursor: pointer;
+}
+.split: before {
+        content: 'CLICK OVER IMAGE';
+        color: #777;
+
+  letter-spacing: 1px;
+
+  font-size: 20px;
+
+  position: absolute;
+
+  bottom: -30px;
+
+  left: 50%;
+
+  transform: translate(-50%);
+
+}
+
+.split img {
+
+  height: auto;
+
+  width: 100%;
+
+  opacity: 0;
+
+}
+
+.split div {
+
+  position: absolute;
+
+  z-index: 1;
+
+  background-repeat: no-repeat;
+
+  transform: rotateY(-50deg) scale(0.5);
+
+  opacity: 0;
+
+  transform-origin: bottom;
+
+  transition: all 0.6s cubic-bezier(0.71, 0.05, 0.09, 0.91);
+
+}
+
+.split.active div {
+
+  opacity: 1;
+
+  transform: rotate(0deg) translateY(0);
+
+}
